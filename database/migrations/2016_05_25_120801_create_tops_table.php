@@ -14,7 +14,7 @@ class CreateTopsTable extends Migration
     {
         Schema::create('tops', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('aid');
+            $table->integer('article_id');
             $table->timestamp('expire_time');
             $table->tinyInteger('status')->default(1);
             $table->timestamps();

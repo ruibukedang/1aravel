@@ -16,13 +16,14 @@ class CreateArticlesTable extends Migration
             $table->increments('id');
             $table->string('title', 100);
             $table->text('content');
-            $table->integer('author')->unsigned();
+            $table->integer('user_id')->unsigned();
             $table->integer('pv');
-            $table->integer('nodeid')->unsigned();
+            $table->double('score', 8, 4);
+            $table->integer('node_id')->unsigned();
             $table->tinyInteger('status')->default(1);
             $table->timestamps();
-            $table->foreign('author')->references('id')->on('users');
-            $table->foreign('nodeid')->references('id')->on('nodes');
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('node_id')->references('id')->on('nodes');
         });
     }
 

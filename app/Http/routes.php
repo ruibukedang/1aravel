@@ -12,3 +12,5 @@
 */
 
 Route::get('/', 'IndexController@index');
+Route::get('/a/{id}', 'ArticleController@show');
+Route::get('/m/{nickname}', 'UserController@show');
