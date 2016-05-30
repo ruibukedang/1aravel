@@ -1,9 +1,9 @@
-@extends('index.layout')
+@extends('public.base')
 @section('customer_css')
 <link rel="stylesheet" href="/css/user/show.css">
 @endsection
 @section('content')
-<div class="u-main am-container">
+<div class="u-main container">
     Nickname: {{$user->nickname}}<br>
     Email: {{$user->email}}<br>
     Blog: {{$user->blog}}<br>
